@@ -1,0 +1,10 @@
+<suite name="iOS Test Suite" parallel="tests" thread-count="2">
+    <test name="Local device">
+        <parameter name="deviceUID" value="ZY227MRS44"/>
+        <parameter name="systemPort" value="54000"/>
+    </test>
+    <test name="Smartdust device">
+        <parameter name="deviceUID" value="public.smartdust.me:12917"/>
+        <parameter name="systemPort" value="54001"/>
+    </test>
+</suite>
