@@ -15,7 +15,7 @@ class AppiumTestBase {
 
     @BeforeTest
     @Parameters({"deviceUID", "systemPort"})
-    private void setUp(String deviceUDID, String systemPort) {
+    public void setUp(String deviceUDID, String systemPort) {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("platformName", "iOS");
         desiredCapabilities.setCapability("appium:automationName", "Safari");
@@ -34,7 +34,7 @@ class AppiumTestBase {
     }
 
     @AfterTest
-    private void tearDown() {
+    public void tearDown() {
         driver.quit();
     }
 
